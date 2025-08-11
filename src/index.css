@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&family=Lobster&display=swap');
+
+
+@import "tailwindcss";
+
+
+
+
+:root {
+  font-family: "Poppins", sans-serif, "'Dancing Script'", "'Bebas Neue'", "'Pacifico'", "cursive";
+  color-scheme:blue;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", serif;
+  /* font-weight: bold; */
+  font-style:normal;
+  font-size: large;
+  
+}
+.bebas-neue-regula {
+    font-family: "Bebas Neue", serif;
+    /* font-weight: bold; */
+    font-style:normal;
+    font-size:4rem;
+    
+  }
+.bebas-neue-logo {
+  font-family: "Bebas Neue", serif;
+  font-weight: bold;
+  font-style:normal;
+  color:aliceblue;
+  font-size:6rem;
+  /* font-size:xx-large; */
+}
+.bebas-neue-goals {
+  font-family: "Bebas Neue", serif;
+  font-weight: lighter;
+  font-style:normal;
+  /* color:black; */
+  font-size:2rem;
+}
+
+.bebas-neue-words {
+  font-family: "Bebas Neue", serif;
+  font-weight:400;
+  font-style:normal;
+  color:aliceblue;
+  font-size: 3rem;
+  display:inline;
+}
+.bebas-neue-word {
+  font-family: "Bebas Neue", serif;
+  font-weight:400;
+  font-style:normal;
+  color:aliceblue;
+  font-size: 3rem;
+}
+
+
+.fancy-logo {
+  font-family: 'Lobster', cursive;  /* Curvy and stylish font */
+  font-size: 2rem;                  /* Large text */
+  font-weight: bold;                 /* Make it bold */
+  color: #faf205ee;                    /* Vibrant pink color */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Soft glow effect */
+  text-align: center;                 /* Center align text */
+}
+.fancy-heading {
+  font-family: 'Lobster', cursive;  /* Curvy and stylish font */
+  font-size: 2rem;                  /* Large text */
+  color: #faf205ee;                    /* Vibrant pink color */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Soft glow effect */
+}
+
+.rotate-text {
+  animation: rotate 5s infinite linear;
+}
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.bounce-text {
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+/* color: #906d6a;                     */
