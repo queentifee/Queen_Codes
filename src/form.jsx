@@ -2,7 +2,6 @@ import {React, useState} from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import {  FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom"
 
 
 const ContactForm = () => {
@@ -11,7 +10,7 @@ const ContactForm = () => {
     const [successMessage, setSuccessMessage] = useState('')
   
  
-    const handleSubmit = async (values, { setSubmitting }) => {
+    const handleSubmit = async (values, { setSubmitting, resetForm }) => {
       setIsLoading(true);
     setErrorMessage('');
 
@@ -39,7 +38,8 @@ const ContactForm = () => {
       const result = await response.json();
 
       if (response.ok) {
-setSuccessMessage ('Form Submitted! We will get in touch.' )
+setSuccessMessage ('Form Submitted! I will get in touch.' )
+resetForm();
 setTimeout(() => {
   setSuccessMessage('');
   // onClose();
@@ -51,6 +51,7 @@ setTimeout(() => {
 } catch (error) {
   setErrorMessage (`${error.message}`)
 } finally {
+  setSubmitting(false);
   setIsLoading(false)
 }
 }
@@ -75,10 +76,9 @@ setTimeout(() => {
                 name: Yup.string().min(2, "Too Short!").required("Required"),
                 project: Yup.string().min(10, "Please describe more").required("Required"),
               })}
-              onSubmit={ handleSubmit }
-               
+              onSubmit={handleSubmit}
             >
-              {({ isSubmitting, }) => (
+              {({ isSubmitting }) => (
                 <Form className="space-y-4">
                   <div>
                     <Field
@@ -114,16 +114,33 @@ setTimeout(() => {
 />
                     <ErrorMessage name="project" component="div" className="text-red-500 text-sm" />
                   </div>
-                  {successMessage && (
-                          <div className="item-added-box border border-green-100 bg-green-100 rounded-lg p-3 mt-4 text-orange-700 max-w-md mx-auto shadow-md">
-                            <p className="mt-2 text-lightBlue font-bold">{successMessage}</p>
-                          </div>
-                        )}
+                {successMessage && (
+  <div className="max-w-md mx-auto mt-4 flex items-start gap-3 rounded-xl border border-purple-200 bg-purple-50 p-4 shadow-sm animate-fade-in">
+    
+    {/* Success Icon */}
+    <div className="flex-shrink-0">
+      <svg
+        className="w-6 h-6 text-purple-300"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+
+    {/* Message */}
+    <p className="text-sm font-medium text-green-800 leading-relaxed">
+      {successMessage}
+    </p>
+  </div>
+)}
                   <button
                     type="submit"
                      className="mt-4 w-full bg-purple-500 text-white py-2 rounded-full hover:bg-purple-700"
                     // onClick={handleSubmit}
-                    disabled={isLoading}>
+                    disabled={isLoading || isSubmitting}>
                   {isLoading ? 'Submitting...' : 'Submit'}
                   
                   </button>
