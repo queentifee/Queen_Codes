@@ -9,7 +9,7 @@ import ViewCV from './ViewCV'
   
 
       return (
-        <div className="w-full bg-[#FFFAFA] px-0 lg:px-6 py-10 ">
+        <div className="w-full bg-[#FFFAFA]  p-4 lg:px-6 py-10 ">
            
 <div className="container mx-auto px-6 lg:px-10 ">
 {/* Title */}
@@ -58,9 +58,10 @@ About Me</h2>
           </h2>
 
           <p className="text-lg text-gray-500">
-         Hi, I’m Queen Samuel a Full Stack Developer with a strong focus on backend systems.
-I build scalable, secure APIs and services using Node.js, Express, and modern databases. While I’m comfortable across the stack, I thrive in crafting efficient server-side logic and robust backend architectures. Outside of work, I enjoy exploring new backend technologies and contributing to personal projects.
-
+       I'm Queen Samuel, a Full Stack Developer with a thing for backend systems.
+   I got into coding because I wanted to understand how apps actually work. Now I build the systems that power them — APIs, databases, server-side logic, all the stuff that happens behind the scenes.
+I work with Node.js, NestJS, and PostgreSQL. I can handle frontend work, but backend is where I thrive. I love solving complex problems and building systems that are clean, scalable, and reliable.
+When I'm not coding, I'm learning, refactoring, or building something new. I’m currently open to opportunities where I can contribute to building reliable backend systems and scalable products.
 
           </p>
           <button

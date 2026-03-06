@@ -1,7 +1,7 @@
 
 
 import React,  {useEffect} from "react";
-import Queen from './assets/Queen.pdf'
+import Queen  from './assets/Queen.pdf'
 
 const ViewCV = ({ isModalOpen, onClose }) => {
     useEffect(() => {
@@ -26,7 +26,7 @@ const ViewCV = ({ isModalOpen, onClose }) => {
         {/* CV Preview */}
         <iframe
           src={Queen}
-          className="w-full h-[500px] border"
+          className="w-full h-125 border"
           title="CV Preview"
         ></iframe>
 

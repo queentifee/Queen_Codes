@@ -1,9 +1,9 @@
 import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaFigma, FaNodeJs, } from "react-icons/fa";
-import { SiMysql, SiMongodb, SiNextdotjs, SiFirebase, SiAmazonwebservices, SiDigitalocean, SiJsonwebtokens } from "react-icons/si";
+import { SiMysql, SiMongodb,  SiFirebase, SiDigitalocean, SiJsonwebtokens, SiNestjs, SiTypescript, SiPostgresql } from "react-icons/si";
 
 const Skills = () => {
   return (
-    <section className="py-12 bg-[#FFFAFA] text-white">
+    <section className="py-12 p-4 bg-[#FFFAFA] text-white">
       <div className="container mx-auto px-6 lg:px-10 ">
 {/* Title */}
 <h2 className="bebas-neue-goals text-left my-2 text-2xl font-bold text-black">
@@ -28,19 +28,22 @@ Skills</h2>
           </div>
 
           <div className="flex flex-col items-center p-4 bg-white text-gray-900 rounded-lg shadow-lg hover:scale-105 transition">
-            <FaHtml5 size={40} className="text-orange-500" />
-            <p className="mt-2 font-semibold">HTML5</p>
+            <SiTypescript size={40} className="text-orange-500" />
+            <p className="mt-2 font-semibold">TypeScript</p>
           </div>
 
           <div className="flex flex-col items-center p-4 bg-white text-gray-900 rounded-lg shadow-lg hover:scale-105 transition">
-            <SiAmazonwebservices size={40} className="text-blue-600" />
-            <p className="mt-2 font-semibold">AWS</p>
+            <SiNestjs size={40} className="text-blue-600" />
+            <p className="mt-2 font-semibold">NestJS</p>
           </div>
            <div className="flex flex-col items-center p-4 bg-white text-gray-900 rounded-lg shadow-lg hover:scale-105 transition">
             <SiDigitalocean size={40} className="text-blue-500" />
             <p className="mt-2 font-semibold">DigitalOcean</p>
           </div>
-
+          <div className="flex flex-col items-center p-4 bg-white text-gray-900 rounded-lg shadow-lg hover:scale-105 transition">
+            <SiPostgresql size={40} className="text-blue-500" />
+            <p className="mt-2 font-semibold">PostgreSQL</p>
+          </div>
           <div className="flex flex-col items-center p-4 bg-white text-gray-900 rounded-lg shadow-lg hover:scale-105 transition">
             <SiFirebase size={40} className="text-red-600" />
             <p className="mt-2 font-semibold">Firebase</p>

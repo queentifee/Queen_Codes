@@ -17,13 +17,38 @@ const FlexDisplay = () => {
   ],
   performance: "Optimized for fast load times and responsive mobile-first design",
   architecture: "Monorepo with modular components and API routes",
-  github: "https://github.com/Mentorled-Projects/Joe-backend",
   demo: "#",
   apiDocs: "#",
   endpoints: [
     { method: "GET", path: "/api/v1/milestones", description: "Fetch milestones" },
     { method: "POST", path: "/api/v1/messages", description: "Send messages between guardian and tutor accounts" },
     { method: "GET", path: "/api/v1/post/:id", description: "Retrieve posts by a user" }
+  ]
+},
+
+{
+  id: "code-mentor-ai",
+  title: "Code Mentor – AI-Powered Programming Learning Agent",
+  description: "An adaptive AI-powered learning assistant that generates personalized programming learning paths and guidance for developers across multiple languages and skill levels.",
+  stack: ["Mastra", "Gemini 2.0 Flash", "TypeScript", "Node.js", "AI Agents"],
+  features: [
+    "Adaptive AI agent capable of supporting 15+ programming languages",
+    "Personalized learning roadmaps based on user skill level",
+    "Three structured learning levels: Beginner, Intermediate, and Advanced",
+    "AI-generated explanations, exercises, and learning guidance",
+    "Dynamic curriculum generation to reduce manual research",
+    "Modular AI workflow design using Mastra",
+    "Optimized prompt orchestration for consistent AI responses"
+  ],
+  performance: "Reduced manual programming curriculum research time by approximately 60% through automated AI-driven roadmap generation",
+  architecture: "Agent-based architecture using Mastra for orchestration with Gemini 2.0 Flash powering adaptive responses and roadmap generation",
+  github: "https://github.com/queentifee/code-mentor.git",
+  documentation: "#",
+  capabilities: [
+    "Generate personalized programming learning roadmaps",
+    "Explain coding concepts interactively",
+    "Suggest practice exercises based on skill level",
+    "Support learning across multiple programming languages"
   ]
 },
 
@@ -55,30 +80,32 @@ const FlexDisplay = () => {
   ]
 },
 
-   {
-  id: "pitchers-api",
-  title: "Pitchers – API Development for a Software Development Website",
-  description: "Fully functional backend API for the Pitchers platform, enabling seamless authentication, user management, and contact form handling for prospective clients.",
-  stack: ["Node.js", "Express", "JavaScript", "MongoDB", "Nodemailer", "Render", "Swagger"],
+  {
+  id: "wallet-service-api",
+  title: "Wallet Service API – Fintech-Ready Payment & Transfer Backend",
+  description: "A secure wallet backend system that enables users to manage balances, perform transfers, and process payments safely with Paystack integration.",
+  stack: ["NestJS", "TypeScript", "PostgreSQL", "Prisma/TypeORM", "Google OAuth 2.0", "Paystack API", "JWT"],
   features: [
-    "Secure user authentication with JWT",
-    "Google OAuth integration for quick sign-in",
-    "User account and profile management",
-    "Contact form submission handling with email notifications via Nodemailer",
-    "RESTful API endpoints with structured routing",
-    "Interactive API documentation using Swagger",
-    "Optimized database queries for better performance"
+    "Secure user authentication using JWT and Google OAuth 2.0",
+    "Wallet creation and balance management for users",
+    "Idempotent wallet transfers to prevent duplicate transactions",
+    "Paystack payment gateway integration for deposits",
+    "Transaction history tracking and management",
+    "RESTful API with modular NestJS architecture",
+    "Robust validation and error handling"
   ],
-  performance: "Hosted on Render with efficient middleware and API request handling for minimal latency",
-  architecture: "Modular Express.js structure with MVC pattern",
-  github: "https://github.com/queentifee/Pitchers_Backend",
-  demo: "#",
-  apiDocs: "https://pitchers-backend.onrender.com/api-docs",
+  performance: "Designed with idempotent transaction handling and database constraints to reduce duplicate transaction risks by approximately 90%",
+  architecture: "Scalable modular architecture using NestJS with service, controller, and repository layers",
+  github: "https://github.com/queentifee/wallet_service",
+  documentation: "#",
+  apiDocs: "https://walletservice-queentifee7847-wtxm4swf.leapcell.dev/api/docs",
+
   endpoints: [
-    { method: "POST", path: "/api/auth/signup", description: "Register a new user" },
-    { method: "POST", path: "/api/auth/google", description: "Authenticate with Google OAuth" },
-    { method: "GET", path: "/api/users/:id", description: "Get user details by ID" },
-    { method: "POST", path: "/api/contact", description: "Submit contact form and send email notification" }
+    { method: "POST", path: "/auth/google", description: "Authenticate users using Google OAuth 2.0" },
+    { method: "GET", path: "/wallet", description: "Retrieve user's wallet details and balance" },
+    { method: "POST", path: "/wallet/deposit", description: "Fund wallet using Paystack" },
+    { method: "POST", path: "/wallet/transfer", description: "Transfer funds securely between wallets with idempotency protection" },
+    { method: "GET", path: "/transactions", description: "Fetch transaction history for a user" }
   ]
 }
 
@@ -164,14 +191,14 @@ const FlexDisplay = () => {
             >
               Overview
             </button>
-            <button
+            {/* <button
               className={`text-sm px-3 py-1 rounded ${
                 tab === 'endpoints' ? 'bg-black text-white' : 'bg-gray-200'
               }`}
               onClick={() => setTab('endpoints')}
             >
               API
-            </button>
+            </button> */}
            
           </div>
           {renderTabContent()}
